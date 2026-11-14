@@ -63,5 +63,18 @@ public class Main {
         lt.addLast(30);
 
         lt.display();
+        
+        lt.addFirst(40);
+        lt.addFirst(50);
+
+        lt.display();
+        
+        lt.removeFirst();
+        
+        lt.display();
+
+        lt.removeLast();
+        
+        lt.display();
     }
 }

@@ -27,6 +27,10 @@ public class Node<T> {
         this.next = null;
     }
 
+    public void clearPrev() {
+        this.prev = null;
+    }
+
     public T getValue() {
         return val;
     }

@@ -53,7 +53,7 @@ public class LinkedList<T> {
         if (head == null) {
             tail = null;
         } else {
-            head.setPrev(null); // Clear reference to removed node
+            head.clearPrev(); // Clear reference to removed node
         }
         size--;
         return removedVal;
