@@ -58,9 +58,9 @@ public class Main {
 
         LinkedList<Integer> x = new LinkedList<>();
 
-        x.add(10);
-        x.add(20);
-        x.add(30);
+        x.addLast(10);
+        x.addLast(20);
+        x.addLast(30);
 
         x.display();
     }

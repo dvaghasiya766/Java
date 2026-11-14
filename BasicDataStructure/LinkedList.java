@@ -11,8 +11,14 @@ public class LinkedList<T> {
         this.size = 0;
     }
 
-    public void add(T value) {
-        Node<T> newNode = new Node<>(value);
+    public void addLast(T value) {
+        Node<T> newNode;
+        if (tail == null) {
+            newNode = new Node<>(value); // Don't link with previous for empty linkedlist
+        } else {
+            newNode = new Node<>(value, tail); // Link old head back to newNode
+        }
+
         if (head == null) {
             head = newNode;
             tail = newNode;
@@ -25,13 +31,16 @@ public class LinkedList<T> {
 
     public void addFirst(T value) {
         Node<T> newNode = new Node<>(value);
+
         if (head == null) {
             head = newNode;
             tail = newNode;
         } else {
             newNode.setNext(head);
+            head.setPrev(newNode); // Link old head's prev back to newNode
             head = newNode;
         }
+
         size++;
     }
 
@@ -43,6 +52,8 @@ public class LinkedList<T> {
         head = head.getNext();
         if (head == null) {
             tail = null;
+        } else {
+            head.setPrev(null); // Clear reference to removed node
         }
         size--;
         return removedVal;
@@ -53,15 +64,21 @@ public class LinkedList<T> {
             throw new IllegalStateException("List is Empty");
         }
         T removedVal = tail.getValue();
-        tail=
+        tail = tail.getPrev();
+        if (tail == null) {
+            head = null;
+        } else {
+            tail.setNext(); // Clears next link using empty varargs
+        }
+        size--;
         return removedVal;
     }
 
     public void display() {
-        Node<T> next = head;
-        for (int i = 0; i < size; i++) {
-            System.out.print(next.getValue() + " -> ");
-            next = next.getNext();
+        Node<T> current = head;
+        while (current != null) {
+            System.out.print(current.getValue() + " -> ");
+            current = current.getNext();
         }
         System.out.println("null");
     }

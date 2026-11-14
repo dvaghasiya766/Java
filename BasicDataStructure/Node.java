@@ -10,9 +10,21 @@ public class Node<T> {
         this.prev = prev;
     }
 
+    public Node(T value) {
+        this(value, null);
+    }
+
     @SafeVarargs
     public final void setNext(Node<T>... n) {
         this.next = n;
+    }
+
+    public void setPrev(Node<T> n) {
+        this.prev = n;
+    }
+
+    public void clearNext() {
+        this.next = null;
     }
 
     public T getValue() {
