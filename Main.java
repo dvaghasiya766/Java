@@ -56,12 +56,12 @@ public class Main {
         // System.err.println(ticketCounter.deleteFromFront());
         // System.err.println(ticketCounter.deleteFromRear());
 
-        LinkedList<Integer> x = new LinkedList<>();
+        LinkedList<Integer> lt = new LinkedList<>();
 
-        x.addLast(10);
-        x.addLast(20);
-        x.addLast(30);
+        lt.addLast(10);
+        lt.addLast(20);
+        lt.addLast(30);
 
-        x.display();
+        lt.display();
     }
 }
