@@ -1,4 +1,5 @@
-import BasicDataStructure.DoubleEndedLinearQueue;
+
+import BasicDataStructure.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
@@ -32,28 +33,35 @@ public class Main {
 
         // ticketCounter.display();
 
-        DoubleEndedLinearQueue ticketCounter = new DoubleEndedLinearQueue(4);
+        // DoubleEndedLinearQueue ticketCounter = new DoubleEndedLinearQueue(4);
 
-        for (int i = 0; i <= 5; i++) {
-            if (i < 2) {
-                System.out.println(ticketCounter.insertFromFront(i));
-            } else {
-                System.out.println(ticketCounter.insertFromRear(i));
-            }
-        }
+        // for (int i = 0; i <= 5; i++) {
+        // if (i < 2) {
+        // System.out.println(ticketCounter.insertFromFront(i));
+        // } else {
+        // System.out.println(ticketCounter.insertFromRear(i));
+        // }
+        // }
 
-        ticketCounter.display();
+        // ticketCounter.display();
 
-        System.err.println(ticketCounter.deleteFromFront());
-        System.err.println(ticketCounter.deleteFromFront());
+        // System.err.println(ticketCounter.deleteFromFront());
+        // System.err.println(ticketCounter.deleteFromFront());
 
-        ticketCounter.display();
+        // ticketCounter.display();
 
-        System.err.println(ticketCounter.deleteFromRear());
-        System.err.println(ticketCounter.deleteFromRear());
+        // System.err.println(ticketCounter.deleteFromRear());
+        // System.err.println(ticketCounter.deleteFromRear());
 
-        System.err.println(ticketCounter.deleteFromFront());
-        System.err.println(ticketCounter.deleteFromRear());
-        
+        // System.err.println(ticketCounter.deleteFromFront());
+        // System.err.println(ticketCounter.deleteFromRear());
+
+        LinkedList<Integer> x = new LinkedList<>();
+
+        x.add(10);
+        x.add(20);
+        x.add(30);
+
+        x.display();
     }
 }
